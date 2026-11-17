@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation Assignment</title>
+</head>
+<body>
+
+  <form action="submit.php" method="POST">
+    <!-- Full Name: required -->
+    <div>
+      <input type="text" name="fullname" placeholder="Full name" required>
+    </div><br>
+
+    <!-- Email: required -->
+    <div>
+      <input type="email" name="email" placeholder="you@college.edu" required>
+    </div><br>
+
+    <!-- Mobile: pattern attribute for 10 digits -->
+    <div>
+      <input type="text" name="mobile" placeholder="10-digit mobile" pattern="[0-9]{10}" title="Enter exactly 10 digits" required>
+    </div><br>
+
+    <!-- Password / Text: minlength attribute -->
+    <div>
+      <input type="password" name="password" placeholder="Min 6 characters" minlength="6" required>
+    </div><br>
+
+    <!-- Age: min and max attributes -->
+    <div>
+      <input type="number" name="age" placeholder="Age" min="1" max="30" required>
+    </div><br>
+
+    <div>
+      <button type="submit">Register</button>
+    </div><br>
+  </form>
+
+</body>
+</html>

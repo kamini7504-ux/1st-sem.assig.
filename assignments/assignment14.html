@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 14: Nested and Responsive Tables</title>
+  <style>
+    /* Container that makes the table scroll horizontally on small screens */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Styling for both the outer and inner tables */
+    table {
+      border-collapse: collapse;
+      font-family: Georgia, "Times New Roman", serif;
+      text-align: left;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 10px 14px;
+      white-space: nowrap; /* Prevents text wrapping so horizontal scroll triggers cleanly */
+    }
+
+    /* Center-align headers in the outer table */
+    .outer-table > thead > tr > th {
+      text-align: center;
+    }
+
+    /* Padding around the cell holding the nested table */
+    .nested-container {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Wrapper -->
+  <div class="table-responsive">
+    <table class="outer-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Lab Batches</th>
+          <th>Faculty</th>
+          <th>Room</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Friday</td>
+          <td class="nested-container">
+            <!-- Nested Table -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Batch</th>
+                  <th>System</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A1</td>
+                  <td>PC 1-20</td>
+                </tr>
+                <tr>
+                  <td>A2</td>
+                  <td>PC 21-40</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>Dr. Sharma</td>
+          <td>Lab 2</td>
+          <td>2-4 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
